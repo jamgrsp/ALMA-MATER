@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  padding: 150px;
+  text-align: center;
+  background-image: url(IMAGES/HEADER.gif);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 50%;
+}
+
+.headerlogo {
+  position: absolute;
+  margin-top: -100px;
+  margin-left: 15px;
+}
+
+.rows {
+  display: flex;
+  margin-top: 80px;
+}
+
+/* Create three equal columns that sits next to each other */
+.columns {
+  flex: 30%;
+  padding: 10px;
+  margin-top: 100px;
+  margin-left: 25px;
+  margin-right: 25px;
+  align-self: center;
+
+}
+
+html { 
+  background: url(IMAGES/B&W-BACKGROUND.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.column {
+  float:right;
+  width: 33%;
+  padding: 10px;
+  margin-top: 150px;
+  margin-right: 150px;
+  margin-left: 10px;
+}
+
+.row::after {
+content: "";
+clear: both;
+display: table;
+}
+
+.topnav {
+overflow: hidden;
+background-color: #f0f7f4;
+}
+
+.topnav a {
+float: right;
+display: block;
+color: darkblue;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-family:serif;
+}
+
+.topnav a:hover {
+background-color: #ddd;
+}
+
+.topnav a.active {
+  background-color: #99e1d9;
+  color: white;
+}
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+  margin-left: 70px;
+  margin-top: 80px;
+}
+
+div.section{
+  padding-left: 260px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+  
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  font-family: Courier New; color:darkslateblue;
+  background-color:whitesmoke;
+  
+}
+
+.footer1 {
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:30px;
+  width:100%;
+  background:whitesmoke;
+}
+
+.footer1 a {
+  text-align: center;
+  padding-left: 100px;
+}
+/* IE 6 */
+html #footer {
+  position:absolute;
+  top:expression((0-(footeroffsetHeight)+(documentdocumentElementclientHeight  documentdocumentElementclientHeight  documentbodyclientHeight)+(ignoreMe = documentdocumentElementscrollTop  documentdocumentElementscrollTop  documentbody  scrollTop))+'px');
+}
+
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1000px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
